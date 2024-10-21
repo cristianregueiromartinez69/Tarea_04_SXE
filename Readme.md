@@ -46,10 +46,20 @@ service mariadb start
 sudo apt install -y php php-mysql libapache2-mod-phpCopiar
 
 #Nos dirán de que región somos y más cosas, lo rellenamos y enter
+```
 ![imagenPHP.png](imagenPHP.png)
 
+```bash
+#Vamos a probar apache, ejecutamos este comando
+echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 
+#Comprobamos que funciona, podemos hacerlo desde el navegador o a través de curl
 
+#navegador
+http://(ip maquina)/info.php
 
-
+#curl
+apt-get update && apt-get install -y curl #instala curl
+curl localhost/info.php #comprobamos que funciona el info.php, deberíamos de ver un html gigante
 ```
+![curl.png](curl.png)
