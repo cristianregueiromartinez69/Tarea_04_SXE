@@ -63,3 +63,21 @@ apt-get update && apt-get install -y curl #instala curl
 curl localhost/info.php #comprobamos que funciona el info.php, deberíamos de ver un html gigante
 ```
 ![curl.png](curl.png)
+
+### 2. Utiliza esta guía para instalar wordpress en el contenedor.
+```bash
+#ejecutamos el siguiente comando que instalará muchos paquetes
+sudo apt install ghostscript \
+                 libapache2-mod-php \
+                 mysql-server \
+                 php \
+                 php-bcmath \
+                 php-curl \
+                 php-imagick \
+                 php-intl \
+                 php-json \
+                 php-mbstring \
+                 php-mysql \
+                 php-xml \
+                 php-zip
+
