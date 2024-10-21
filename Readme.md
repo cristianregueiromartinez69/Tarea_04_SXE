@@ -57,7 +57,10 @@ echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 
 #navegador
 http://(ip maquina)/info.php
+```
+![img.png](wordpress.png)
 
+```bash
 #curl
 apt-get update && apt-get install -y curl #instala curl
 curl localhost/info.php #comprobamos que funciona el info.php, deberíamos de ver un html gigante
@@ -134,5 +137,12 @@ FLUSH PRIVILEGES;
 QUIT;
 
 ```
+
+```bash
+#comprobamos que accedemos a wordpress
+http://192.168.1.46:8080/wp-admin/setup-config.php
+```
+**Debería de aparecer esto**
+![img.png](img.png)
 
 
