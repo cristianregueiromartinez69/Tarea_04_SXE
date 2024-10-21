@@ -145,4 +145,14 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 **Debería de aparecer esto**
 ![img.png](img.png)
 
+### Posibles problemas que os podeis encontrar en la instalación
 
+```bash
+
+#ESTE COMANDO ES SÚPER IMPORTANTE, MAPEAR LOS PUERTOS DEL CONTENEDOR CON LA MÁQUINA VIRTUAL
+sudo docker container create -i -t  -p  8080:80 --name pw ubuntu:22.04
+
+#iniciar mariadb, si no nos dará error al hacer (sudo mysql_secure_installation)
+service mariadb start
+
+```
