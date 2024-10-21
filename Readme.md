@@ -49,7 +49,8 @@ sudo apt install -y php php-mysql libapache2-mod-phpCopiar
 
 #Nos dirán de que región somos y más cosas, lo rellenamos y enter
 ```
-![imagenPHP.png](imagenPHP.png)
+![imagenPHP](https://github.com/user-attachments/assets/89242a89-c29f-4771-ac1f-18e5305c8479)
+
 
 ```bash
 #Vamos a probar apache, ejecutamos este comando
@@ -60,14 +61,16 @@ echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 #navegador
 http://(ip maquina)/info.php
 ```
-![img.png](wordpress.png)
+![wordpress](https://github.com/user-attachments/assets/bd53e650-22bd-44e2-bc1f-aed502b54a24)
+
 
 ```bash
 #curl
 apt-get update && apt-get install -y curl #instala curl
 curl localhost/info.php #comprobamos que funciona el info.php, deberíamos de ver un html gigante
 ```
-![curl.png](curl.png)
+![curl](https://github.com/user-attachments/assets/21da007d-2425-465f-9fc3-012dfe11c3a6)
+
 
 ### 2. Utiliza esta guía para instalar wordpress en el contenedor.
 ```bash
@@ -147,7 +150,8 @@ QUIT;
 http://192.168.1.46:8080/wp-admin/setup-config.php
 ```
 **Debería de aparecer esto**
-![img.png](img.png)
+![img](https://github.com/user-attachments/assets/85ca5794-72b4-45fd-8896-22630dd31b9c)
+
 
 ### Posibles problemas que os podeis encontrar en la instalación
 
