@@ -86,3 +86,42 @@ sudo mkdir -p /srv/www
 sudo chown www-data: /srv/www
 curl https://wordpress.org/latest.tar.gz | tar zx -C /srv/www
 
+#Usa echo para crear el archivo /etc/apache2/sites-available/wordpress.conf
+y redirigir la configuración a este archivo
+cat <<EOF > /etc/apache2/sites-available/wordpress.conf
+<VirtualHost *:80>
+    DocumentRoot /srv/www/wordpress
+    <Directory /srv/www/wordpress>
+        Options FollowSymLinks
+        AllowOverride Limit Options FileInfo
+        DirectoryIndex index.php
+        Require all granted
+    </Directory>
+    <Directory /srv/www/wordpress/wp-content>
+        Options FollowSymLinks
+        Require all granted
+    </Directory>
+</VirtualHost>
+EOF
+
+#habilitamos wordpress, pero antes
+service apache2 reload
+
+#Una vez cargado apache2 de nuevo, hacemos
+a2ensite wordpress
+
+#Seguimso con más comandos, ahora este
+sudo a2enmod rewrite
+
+#Seguramente nos pide hacer un
+service apache2 restart
+
+#ejecutamos
+sudo a2dissite 000-default
+
+#para que se cargue hacemos
+service apache2 reload
+
+
+```
+
