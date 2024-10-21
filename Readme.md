@@ -37,6 +37,16 @@ sudo apt install -y apache2 apache2-utils
 sudo apt install -y mariadb-server mariadb-client
 
 #ejecutamos el siguiente comando para proteger la instalación mySQL
+sudo mysql_secure_installationCopiar
+
+#MUY IMPORTANTE, SI OS DA ERROR, HACED ESTO, YA QUE EN LA GUÍA NO ESTÁ
+service mariadb start
+
+#instalamos php
+sudo apt install -y php php-mysql libapache2-mod-phpCopiar
+
+#Nos dirán de que región somos y más cosas, lo rellenamos y enter
+![imagenPHP.png](imagenPHP.png)
 
 
 
