@@ -81,3 +81,8 @@ sudo apt install ghostscript \
                  php-xml \
                  php-zip
 
+#Creamos la instalación para el directorio
+sudo mkdir -p /srv/www
+sudo chown www-data: /srv/www
+curl https://wordpress.org/latest.tar.gz | tar zx -C /srv/www
+
