@@ -26,7 +26,9 @@ sudo docker container create -i -t --name pruebaWordp ubuntu:22.04
 
 #arrancamos el contenedor
 sudo docker container start --attach -i  pruebaWordp 
+```
 
+```bash
 #si ha ido bien, habremos entrado en el terminal, procedemos a seguir la guía. Actualizamos los paquetes
 sudo apt update
 
@@ -88,7 +90,9 @@ sudo apt install ghostscript \
 sudo mkdir -p /srv/www
 sudo chown www-data: /srv/www
 curl https://wordpress.org/latest.tar.gz | tar zx -C /srv/www
+```
 
+```bash
 #Usa echo para crear el archivo /etc/apache2/sites-available/wordpress.conf
 y redirigir la configuración a este archivo
 cat <<EOF > /etc/apache2/sites-available/wordpress.conf
