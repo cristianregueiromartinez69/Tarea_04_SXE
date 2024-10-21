@@ -121,7 +121,18 @@ sudo a2dissite 000-default
 
 #para que se cargue hacemos
 service apache2 reload
+```
 
+***Configuracion de la base de datos para wordpress***
+```bash
+#comandos a ejecutar
+mysql -u root
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '<your-password>';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON wordpress.* TO 'wordpress'@'localhost';
+FLUSH PRIVILEGES;
+QUIT;
 
 ```
+
 
