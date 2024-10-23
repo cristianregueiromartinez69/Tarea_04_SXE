@@ -21,8 +21,8 @@ sudo docker pull ubuntu:22.04
 #comprobamos que existe
 sudo docker images
 
-#Vamos a proceder a instalar LAMP, primero, creamos el contenedor
-sudo docker container create -i -t --name pruebaWordp ubuntu:22.04
+#Vamos a proceder a instalar LAMP, primero, creamos el contenedor y mapeamos el puerto
+sudo docker container create -i -t  -p  8080:80 --name pw ubuntu:22.04
 
 #arrancamos el contenedor
 sudo docker container start --attach -i  pruebaWordp 
@@ -39,13 +39,13 @@ sudo apt install -y apache2 apache2-utils
 sudo apt install -y mariadb-server mariadb-client
 
 #ejecutamos el siguiente comando para proteger la instalación mySQL
-sudo mysql_secure_installationCopiar
+sudo mysql_secure_installation
 
 #MUY IMPORTANTE, SI OS DA ERROR, HACED ESTO, YA QUE EN LA GUÍA NO ESTÁ
 service mariadb start
 
 #instalamos php
-sudo apt install -y php php-mysql libapache2-mod-phpCopiar
+sudo apt install -y php php-mysql libapache2-mod-php
 
 #Nos dirán de que región somos y más cosas, lo rellenamos y enter
 ```
@@ -114,22 +114,22 @@ cat <<EOF > /etc/apache2/sites-available/wordpress.conf
 </VirtualHost>
 EOF
 
-#habilitamos wordpress, pero antes
+#habilitamos wordpress, pero antes reiniciamos apache2
 service apache2 reload
 
-#Una vez cargado apache2 de nuevo, hacemos
+#Una vez cargado apache2 de nuevo, ejecutamos este comando
 a2ensite wordpress
 
-#Seguimso con más comandos, ahora este
+#después este comando
 sudo a2enmod rewrite
 
-#Seguramente nos pide hacer un
+#Ahora tenemos que reiniciar de nuevo apache2
 service apache2 restart
 
-#ejecutamos
+#luego ejecutamos este comando
 sudo a2dissite 000-default
 
-#para que se cargue hacemos
+#por último, reiniciamos apache2 de nuevo
 service apache2 reload
 ```
 
@@ -153,7 +153,7 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 ![img](https://github.com/user-attachments/assets/85ca5794-72b4-45fd-8896-22630dd31b9c)
 
 
-### Posibles problemas que os podeis encontrar en la instalación
+### Posibles problemas que os podéis encontrar en la instalación
 
 ```bash
 
