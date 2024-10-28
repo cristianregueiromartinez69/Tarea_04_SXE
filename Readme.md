@@ -170,6 +170,14 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 ```
 ![accederWordpress.png](../../../screenShots/accederWordpress.png)
 
+```bash
+#si el alias y contraseña es correcto, nos saldrá algo así
+```
+![paginaIniciowordpress.png](../../../screenShots/paginaIniciowordpress.png)
+
+### ENHORABUENA, SI TODO HA FUNCIONADO YA PUEDES INTERACTURAR CON WORDPRESS
+:blush:
+
 ### Posibles problemas que os podéis encontrar en la instalación
 
 ```bash
