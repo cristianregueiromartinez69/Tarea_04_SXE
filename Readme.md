@@ -157,23 +157,27 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 ```bash
 #establecemos el idioma, en mi caso español
 ```
-![wordpressIdioma.png](../../../screenShots/wordpressIdioma.png)
+![wordpressIdioma](https://github.com/user-attachments/assets/a64c18ea-ac10-45b9-9136-24283dc9ea6b)
+
 
 
 ```bash
 #introducimos usuario, contraseña, alias y nombre de la web
 ```
-![usercontraseñawordpress.png](../../../screenShots/usercontrase%C3%B1awordpress.png)
+![usercontraseñawordpress](https://github.com/user-attachments/assets/6bc1a60a-96f6-4eee-a580-be9b9c05b230)
+
 
 ```bash
 #Si ha ido bien, nos saldrá un mensaje de exito y nos redigirá para introducir alias y contraseña
 ```
-![accederWordpress.png](../../../screenShots/accederWordpress.png)
+![accederWordpress](https://github.com/user-attachments/assets/42ee5342-519f-43ad-b681-72856bc34f43)
+
 
 ```bash
 #si el alias y contraseña es correcto, nos saldrá algo así
 ```
-![paginaIniciowordpress.png](../../../screenShots/paginaIniciowordpress.png)
+![paginaIniciowordpress](https://github.com/user-attachments/assets/a69d12e1-4d5d-4ba7-aa33-1051b5368676)
+
 
 ### ENHORABUENA, SI TODO HA FUNCIONADO YA PUEDES INTERACTURAR CON WORDPRESS
 :blush:
