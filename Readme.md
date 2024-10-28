@@ -153,6 +153,13 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 ![img](https://github.com/user-attachments/assets/85ca5794-72b4-45fd-8896-22630dd31b9c)
 
 
+## Configuración de wordpress
+```bash
+#establecemos el idioma, en mi caso español
+```
+![wordpressIdioma.png](../../../screenShots/wordpressIdioma.png)
+
+
 ### Posibles problemas que os podéis encontrar en la instalación
 
 ```bash
