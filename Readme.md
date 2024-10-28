@@ -160,6 +160,11 @@ http://192.168.1.46:8080/wp-admin/setup-config.php
 ![wordpressIdioma.png](../../../screenShots/wordpressIdioma.png)
 
 
+```bash
+#introducimos usuario, contraseña, alias y nombre de la web
+```
+![usercontraseñawordpress.png](../../../screenShots/usercontrase%C3%B1awordpress.png)
+
 ### Posibles problemas que os podéis encontrar en la instalación
 
 ```bash
